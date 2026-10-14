@@ -157,9 +157,9 @@ const stack = ['Go', 'GTK3 (gotk4)', 'gtk-layer-shell', 'YAML config'];
         <div class="flex flex-wrap justify-center gap-4 md:justify-start">
           <a href="#install" class="btn-primary">
             <Icon name="lucide:terminal" class="h-4 w-4" />
-            Build from source
+            Install Edwin
           </a>
-          <a href="https://github.com/tapiaw38/edwin-landing" target="_blank" rel="noreferrer" class="btn-secondary">
+          <a href="https://github.com/tapiaw38/edwin" target="_blank" rel="noreferrer" class="btn-secondary">
             <Icon name="lucide:github" class="h-4 w-4" />
             View on GitHub
           </a>
@@ -305,8 +305,8 @@ const stack = ['Go', 'GTK3 (gotk4)', 'gtk-layer-shell', 'YAML config'];
     <div class="pointer-events-none absolute inset-0 bg-edwin-taupe/[0.025]"></div>
     <div class="relative mx-auto max-w-4xl">
       <div class="text-center reveal">
-        <h2 class="section-title">Build it yourself.<br class="hidden sm:block" />No installer, no telemetry.</h2>
-        <p class="section-subtitle">Edwin ships as source. Clone, build with Go, run.</p>
+        <h2 class="section-title">One command.<br class="hidden sm:block" />Ready in seconds.</h2>
+        <p class="section-subtitle">Install the latest prebuilt Edwin release and start using it in seconds.</p>
       </div>
 
       <div class="mt-10 space-y-4 text-left">
@@ -315,22 +315,10 @@ const stack = ['Go', 'GTK3 (gotk4)', 'gtk-layer-shell', 'YAML config'];
             <span class="h-2.5 w-2.5 rounded-full bg-edwin-taupe/60"></span>
             <span class="h-2.5 w-2.5 rounded-full bg-edwin-gold/60"></span>
             <span class="h-2.5 w-2.5 rounded-full bg-edwin-gold/60"></span>
-            <span class="ml-3 text-xs font-bold text-edwin-gold">Step 1 — Clone & install dependencies</span>
+            <span class="ml-3 text-xs font-bold text-edwin-gold">Step 1 — Install the latest release</span>
           </div>
-          <pre class="overflow-x-auto p-4 text-sm font-mono"><code><span class="text-edwin-taupe/65"># Arch Linux example</span>
-<span class="text-edwin-gold">git clone https://github.com/tapiaw38/edwin-landing.git && cd edwin-landing</span>
-<span class="text-edwin-gold">sudo pacman -S gtk3 gtk-layer-shell playerctl yt-dlp aspell hunspell</span>
-<span class="text-edwin-gold">go mod tidy</span></code></pre>
-        </div>
-
-        <div class="terminal-window reveal reveal-delay-2">
-          <div class="terminal-chrome">
-            <span class="h-2.5 w-2.5 rounded-full bg-edwin-taupe/60"></span>
-            <span class="h-2.5 w-2.5 rounded-full bg-edwin-gold/60"></span>
-            <span class="h-2.5 w-2.5 rounded-full bg-edwin-gold/60"></span>
-            <span class="ml-3 text-xs font-bold text-edwin-gold">Step 2 — Build</span>
-          </div>
-          <pre class="overflow-x-auto p-4 text-sm font-mono"><code><span class="text-edwin-gold">go build -buildvcs=false -o edwin ./cmd/edwin/</span></code></pre>
+          <pre class="overflow-x-auto p-4 text-sm font-mono"><code><span class="text-edwin-gold">curl -fsSL https://raw.githubusercontent.com/tapiaw38/edwin/main/install.sh | sh</span></code></pre>
+          <p class="px-4 pb-4 text-sm leading-relaxed text-edwin-taupe/75">When pacman is available, installer adds runtime dependencies. It downloads the latest prebuilt release and installs it at <code class="text-edwin-cream">~/.local/bin/edwin</code>.</p>
         </div>
 
         <div class="terminal-window reveal reveal-delay-3">
@@ -338,26 +326,26 @@ const stack = ['Go', 'GTK3 (gotk4)', 'gtk-layer-shell', 'YAML config'];
             <span class="h-2.5 w-2.5 rounded-full bg-edwin-taupe/60"></span>
             <span class="h-2.5 w-2.5 rounded-full bg-edwin-gold/60"></span>
             <span class="h-2.5 w-2.5 rounded-full bg-edwin-gold/60"></span>
-            <span class="ml-3 text-xs font-bold text-edwin-gold">Step 3 — Bind a key & run</span>
+            <span class="ml-3 text-xs font-bold text-edwin-gold">Launch Edwin</span>
           </div>
           <pre class="overflow-x-auto p-4 text-sm font-mono"><code><span class="text-edwin-taupe/65"># Edwin doesn't grab a global hotkey itself — your compositor spawns it.</span>
 <span class="text-edwin-taupe/65"># Bind a key to run the binary, e.g. in Sway/Hyprland/niri/river config:</span>
-<span class="text-edwin-taupe/65">#   bindsym SUPER+s exec /path/to/edwin</span>
+<span class="text-edwin-taupe/65">#   bindsym SUPER+s exec ~/.local/bin/edwin</span>
 
 <span class="text-edwin-taupe/65"># MangoWM users get an auto-writer that reads hotkey from config.yaml:</span>
-<span class="text-edwin-gold">./edwin --setup</span>
+<span class="text-edwin-gold">~/.local/bin/edwin --setup</span>
 
-<span class="text-edwin-gold">./edwin</span></code></pre>
+<span class="text-edwin-gold">~/.local/bin/edwin</span></code></pre>
         </div>
       </div>
 
       <div class="mt-8 grid gap-4 md:grid-cols-3 reveal reveal-delay-4">
         <div class="card p-5">
           <p class="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-edwin-taupe/65">
-            <Icon name="lucide:file-code-2" class="h-3.5 w-3.5" />Source only
+            <Icon name="lucide:download" class="h-3.5 w-3.5" />Prebuilt release
           </p>
           <p class="text-sm leading-relaxed text-edwin-taupe/80">
-            No installer script, no package registry. You build the binary yourself with `go build`.
+            Installer fetches the latest prebuilt release and places it in `~/.local/bin`.
           </p>
         </div>
         <div class="card p-5">
@@ -365,15 +353,15 @@ const stack = ['Go', 'GTK3 (gotk4)', 'gtk-layer-shell', 'YAML config'];
             <Icon name="lucide:wifi-off" class="h-3.5 w-3.5" />No telemetry
           </p>
           <p class="text-sm leading-relaxed text-edwin-taupe/80">
-            Everything runs locally. No accounts, no analytics, no network calls except the shortcuts you invoke yourself.
+            No accounts or analytics. Network activity comes from the specific launcher features you invoke.
           </p>
         </div>
         <div class="card p-5">
           <p class="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-edwin-taupe/65">
-            <Icon name="lucide:settings-2" class="h-3.5 w-3.5" />Yours to edit
+            <Icon name="lucide:settings-2" class="h-3.5 w-3.5" />Open source
           </p>
           <p class="text-sm leading-relaxed text-edwin-taupe/80">
-            Small, readable Go codebase. Add a module by implementing one function and registering it in main.go.
+            Edwin is open source. Browse the code and customize the launcher to suit your setup.
           </p>
         </div>
       </div>
@@ -394,9 +382,9 @@ const stack = ['Go', 'GTK3 (gotk4)', 'gtk-layer-shell', 'YAML config'];
       <div class="flex flex-wrap justify-center gap-4">
         <a href="#install" class="btn-primary">
           <Icon name="lucide:terminal" class="h-4 w-4" />
-          Build from source
+          Install Edwin
         </a>
-        <a href="https://github.com/tapiaw38/edwin-landing" target="_blank" rel="noreferrer" class="btn-secondary">
+        <a href="https://github.com/tapiaw38/edwin" target="_blank" rel="noreferrer" class="btn-secondary">
           <Icon name="lucide:github" class="h-4 w-4" />
           View on GitHub
         </a>
