@@ -13,11 +13,7 @@ const {
   description = 'Edwin is a fast, keyboard-driven app launcher for Wayland compositors. Search apps, browse folders, run shell commands, and more — all from one search bar.',
 } = Astro.props;
 
-const favicon =
-  'data:image/svg+xml,' +
-  encodeURIComponent(
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#0a0a0a"/><path d="M13 2 4 14h6l-1 8 9-12h-6z" fill="#e0af68"/></svg>`
-  );
+const favicon = `${import.meta.env.BASE_URL}edwin-icon.png`;
 ---
 
 <!DOCTYPE html>
@@ -25,17 +21,17 @@ const favicon =
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/svg+xml" href={favicon} />
+    <link rel="icon" type="image/png" href={favicon} />
     <title>{title}</title>
     <meta name="description" content={description} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
   </head>
-  <body class="bg-tn-bg text-tn-text min-h-screen">
+  <body class="min-h-screen bg-edwin-bg text-edwin-cream">
     <Navbar />
-    <main class="pt-16">
+    <main class="pt-20">
       <slot />
     </main>
     <Footer />

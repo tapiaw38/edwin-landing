@@ -18,17 +18,17 @@ const resourceLinks = [
 ];
 ---
 
-<footer class="relative overflow-hidden border-t border-white/[0.06] px-6 py-16">
-  <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-edwin-accent/40 to-transparent"></div>
-  <div class="pointer-events-none absolute left-[-6rem] bottom-[-8rem] h-64 w-64 rounded-full bg-edwin-accent/[0.06] blur-3xl"></div>
+<footer class="relative overflow-hidden border-t border-edwin-taupe/15 px-6 py-16">
+  <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-edwin-gold/40 to-transparent"></div>
+  <div class="pointer-events-none absolute left-[-6rem] bottom-[-8rem] h-64 w-64 rounded-full bg-edwin-gold/[0.04] blur-3xl"></div>
 
   <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.3fr_1fr_1fr]">
     <div class="max-w-md">
       <div class="mb-4 flex items-center gap-3">
-        <Icon name="lucide:zap" class="h-7 w-7 text-edwin-accent" />
-        <span class="text-xl font-bold text-edwin-accent">Edwin</span>
+        <img src={`${homeHref}edwin-icon.png`} alt="" class="h-12 w-12 rounded-full object-cover" />
+        <span class="font-serif text-2xl font-medium text-edwin-cream">Edwin</span>
       </div>
-      <p class="mb-6 text-sm leading-relaxed text-tn-subtext">
+      <p class="mb-6 text-sm leading-relaxed text-edwin-taupe/80">
         Edwin — a keyboard-driven launcher built in Go and GTK3 for Wayland compositors. Apps, files, folders, snippets, and a dozen small tools behind one search bar.
       </p>
       <div class="flex flex-wrap gap-3">
@@ -44,25 +44,25 @@ const resourceLinks = [
     </div>
 
     <div>
-      <p class="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-tn-muted">Shortcuts</p>
+      <p class="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-edwin-gold">Shortcuts</p>
       <div class="flex flex-col gap-3 text-sm">
         {productLinks.map(([href, label]) => (
-          <a href={href} class="text-tn-subtext transition-colors hover:text-tn-text">{label}</a>
+          <a href={href} class="text-edwin-taupe/75 transition-colors hover:text-edwin-gold">{label}</a>
         ))}
       </div>
     </div>
 
     <div>
-      <p class="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-tn-muted">Resources</p>
+      <p class="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-edwin-gold">Resources</p>
       <div class="flex flex-col gap-3 text-sm">
         {resourceLinks.map(([href, label]) => (
-          <a href={href} target="_blank" rel="noreferrer" class="text-tn-subtext transition-colors hover:text-tn-text">{label}</a>
+          <a href={href} target="_blank" rel="noreferrer" class="text-edwin-taupe/75 transition-colors hover:text-edwin-gold">{label}</a>
         ))}
       </div>
     </div>
   </div>
 
-  <div class="mx-auto mt-12 flex max-w-6xl flex-col gap-3 border-t border-white/[0.06] pt-6 text-sm text-tn-muted md:flex-row md:items-center md:justify-between">
+  <div class="mx-auto mt-12 flex max-w-6xl flex-col gap-3 border-t border-edwin-taupe/15 pt-6 text-sm text-edwin-taupe/60 md:flex-row md:items-center md:justify-between">
     <p>Edwin. Open source personal project — no telemetry, no accounts.</p>
     <p>Built with Go + GTK3 + gtk-layer-shell.</p>
   </div>

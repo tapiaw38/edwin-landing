@@ -4,33 +4,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        tn: {
-          bg:       "#0a0a0a",
-          night:    "#050505",
-          storm:    "#111114",
-          overlay:  "#414868",
-          comment:  "#565f89",
-          muted:    "#737aa2",
-          text:     "#a9b1d6",
-          subtext:  "#9aa5ce",
-          blue:     "#7aa2f7",
-          cyan:     "#7dcfff",
-          green:    "#9ece6a",
-          yellow:   "#e0af68",
-          orange:   "#ff9e64",
-          red:      "#f7768e",
-          magenta:  "#bb9af7",
-        },
-        edwin: {
-          accent:  "#e0af68",
-          dim:     "#414868",
-          bg:      "#0a0a0a",
-          surface: "#111114",
-        },
+        "edwin-bg": "#181a22",
+        "edwin-taupe": "#d0c1b4",
+        "edwin-gold": "#f5d78c",
+        "edwin-cream": "#fdf2d6",
       },
       fontFamily: {
-        sans: ['"JetBrains Mono"', "monospace"],
-        mono: ['"JetBrains Mono"', "monospace"],
+        sans: ["Manrope", "sans-serif"],
+        serif: ["Cormorant Garamond", "serif"],
+        mono: ["JetBrains Mono", "monospace"],
       },
       animation: {
         float: "float 6s ease-in-out infinite",

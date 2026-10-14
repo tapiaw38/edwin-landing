@@ -5,64 +5,64 @@ import { Icon } from 'astro-icon/components';
 const features = [
   {
     icon: 'lucide:search',
-    color: 'text-edwin-accent',
-    bg: 'bg-edwin-accent/10',
+    color: 'text-edwin-gold',
+    bg: 'bg-edwin-gold/10',
     title: 'App + File Search',
     desc: 'Launch apps instantly, or press f to fuzzy-search every file under $HOME with fd/find. Results stream in as you type, ranked by launch frequency.',
   },
   {
     icon: 'lucide:folder-open',
-    color: 'text-tn-blue',
-    bg: 'bg-tn-blue/10',
+    color: 'text-edwin-gold',
+    bg: 'bg-edwin-gold/10',
     title: 'Folder Navigation',
     desc: 'nav browses any directory inline, with a visual picker (Tab → Rename/Copy/Move) for breadcrumb-driven file operations without touching a mouse.',
   },
   {
     icon: 'lucide:type',
-    color: 'text-tn-green',
-    bg: 'bg-tn-green/10',
+    color: 'text-edwin-gold',
+    bg: 'bg-edwin-gold/10',
     title: 'Text Snippets',
     desc: 'Expand ;keyword into full snippets — email signatures, boilerplate, anything you type twice a day.',
   },
   {
     icon: 'lucide:square-terminal',
-    color: 'text-tn-cyan',
-    bg: 'bg-tn-cyan/10',
+    color: 'text-edwin-gold',
+    bg: 'bg-edwin-gold/10',
     title: 'Shell Commands',
     desc: 'Prefix with > to run any shell command without leaving the launcher, or > htop to peek at the system.',
   },
   {
     icon: 'lucide:clipboard-list',
-    color: 'text-tn-magenta',
-    bg: 'bg-tn-magenta/10',
+    color: 'text-edwin-taupe',
+    bg: 'bg-edwin-taupe/10',
     title: 'Clipboard History',
     desc: 'clip / cb keeps a searchable history of everything you copy — text, color swatches, and images.',
   },
   {
     icon: 'lucide:eye',
-    color: 'text-tn-yellow',
-    bg: 'bg-tn-yellow/10',
+    color: 'text-edwin-gold',
+    bg: 'bg-edwin-gold/10',
     title: 'Quick Look',
     desc: 'Hold Shift to preview PDFs, docs, and images inline — with page and zoom controls, no external viewer.',
   },
   {
     icon: 'lucide:music',
-    color: 'text-edwin-accent',
-    bg: 'bg-edwin-accent/10',
+    color: 'text-edwin-gold',
+    bg: 'bg-edwin-gold/10',
     title: 'Music & Spotify',
     desc: 'sp controls whatever is playing via playerctl; m searches your local library by song, artist, album, or genre.',
   },
   {
     icon: 'lucide:wand-sparkles',
-    color: 'text-tn-orange',
-    bg: 'bg-tn-orange/10',
+    color: 'text-edwin-gold',
+    bg: 'bg-edwin-gold/10',
     title: 'Dev Toolbox',
     desc: 'Base64, URL encode, SHA-256, UUIDs, unit conversion, epoch time — inline, no browser tab required.',
   },
   {
     icon: 'lucide:layout-grid',
-    color: 'text-tn-blue',
-    bg: 'bg-tn-blue/10',
+    color: 'text-edwin-gold',
+    bg: 'bg-edwin-gold/10',
     title: 'And a dozen more',
     desc: 'SSH hosts, window switcher, screenshots, weather, password store, browser bookmarks, timers, emoji picker.',
   },
@@ -141,17 +141,17 @@ const stack = ['Go', 'GTK3 (gotk4)', 'gtk-layer-shell', 'YAML config'];
 <Layout>
   <!-- ─── HERO ─────────────────────────────────────────────────── -->
   <section class="relative overflow-hidden px-6">
-    <div class="absolute top-0 left-1/4 h-[560px] w-[560px] rounded-full bg-edwin-accent/[0.07] blur-3xl pointer-events-none"></div>
-    <div class="absolute bottom-0 right-1/4 h-[440px] w-[440px] rounded-full bg-tn-cyan/[0.04] blur-3xl pointer-events-none"></div>
+    <div class="pointer-events-none absolute left-1/4 top-0 h-[560px] w-[560px] rounded-full bg-edwin-gold/[0.055] blur-3xl"></div>
+    <div class="pointer-events-none absolute bottom-0 right-1/4 h-[440px] w-[440px] rounded-full bg-edwin-taupe/[0.035] blur-3xl"></div>
 
-    <div class="mx-auto grid max-w-7xl items-center gap-10 py-14 md:grid-cols-[0.9fr_1.1fr] md:py-20">
+    <div class="mx-auto grid max-w-7xl items-center gap-12 py-16 md:grid-cols-[0.9fr_1.1fr] md:gap-16 md:py-28">
       <div class="reveal text-center md:text-left">
-        <p class="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-edwin-accent">Keyboard-driven launcher for Linux</p>
-        <h1 class="mb-6 text-4xl font-bold leading-tight tracking-tight text-tn-text sm:text-5xl md:text-6xl">
+        <p class="mb-6 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-edwin-gold"><span class="h-px w-8 bg-edwin-gold/70"></span>Keyboard-driven launcher for Linux</p>
+        <h1 class="mb-6 font-serif text-5xl font-medium leading-[0.98] tracking-tight text-edwin-cream sm:text-6xl md:text-7xl">
           One search bar.<br />
           <span class="gradient-text">Everything else follows.</span>
         </h1>
-        <p class="mx-auto mb-8 max-w-xl text-lg leading-relaxed text-tn-subtext md:mx-0">
+        <p class="mx-auto mb-9 max-w-xl text-lg leading-relaxed text-edwin-taupe/80 md:mx-0">
           Edwin is a keyboard-driven app launcher for Wayland compositors. Apps, files, folders, snippets, clipboard history, and a dozen small tools — all behind one prefix-based search bar.
         </p>
         <div class="flex flex-wrap justify-center gap-4 md:justify-start">
@@ -164,31 +164,30 @@ const stack = ['Go', 'GTK3 (gotk4)', 'gtk-layer-shell', 'YAML config'];
             View on GitHub
           </a>
         </div>
-        <p class="mt-6 text-xs text-tn-muted">
+        <p class="mt-7 text-xs tracking-wide text-edwin-taupe/60">
           Go · GTK3 · gtk-layer-shell — any wlroots-based Wayland compositor
         </p>
       </div>
 
       <!-- Launcher mockup -->
       <div class="w-full reveal reveal-delay-2">
-        <div class="mx-auto max-w-md rounded-2xl border border-white/[0.08] bg-tn-storm/80 p-3 shadow-2xl shadow-black/50 backdrop-blur">
-          <div class="flex items-center gap-3 rounded-xl border border-white/[0.06] bg-tn-night px-4 py-3">
-            <Icon name="lucide:zap" class="h-4 w-4 shrink-0 text-edwin-accent" />
-            <span class="font-mono text-sm text-tn-text">nav ~/Downloads</span>
-            <span class="ml-auto h-4 w-px animate-pulse bg-edwin-accent"></span>
+        <div class="mx-auto max-w-md rounded-[1.75rem] border border-edwin-taupe/20 bg-edwin-taupe/[0.055] p-3 shadow-2xl shadow-black/40 backdrop-blur">
+          <div class="flex items-center gap-3 rounded-2xl border border-edwin-taupe/15 bg-edwin-bg px-4 py-3.5">
+            <span class="font-mono text-sm text-edwin-cream">nav ~/Downloads</span>
+            <span class="ml-auto h-4 w-px animate-pulse bg-edwin-gold"></span>
           </div>
           <div class="mt-2 space-y-1">
             {[
-              { icon: 'lucide:folder', title: 'invoices', desc: '~/Downloads', color: 'text-tn-blue' },
-              { icon: 'lucide:file-text', title: 'contract.pdf', desc: '~/Downloads', color: 'text-tn-red' },
-              { icon: 'lucide:image', title: 'screenshot.png', desc: '~/Downloads', color: 'text-tn-green' },
-              { icon: 'lucide:file-archive', title: 'dataset.zip', desc: '~/Downloads', color: 'text-tn-yellow' },
+              { icon: 'lucide:folder', title: 'invoices', desc: '~/Downloads', color: 'text-edwin-gold' },
+              { icon: 'lucide:file-text', title: 'contract.pdf', desc: '~/Downloads', color: 'text-edwin-taupe' },
+              { icon: 'lucide:image', title: 'screenshot.png', desc: '~/Downloads', color: 'text-edwin-gold' },
+              { icon: 'lucide:file-archive', title: 'dataset.zip', desc: '~/Downloads', color: 'text-edwin-gold' },
             ].map((row, i) => (
-              <div class={`flex items-center gap-3 rounded-lg px-3 py-2.5 ${i === 0 ? 'bg-white/[0.06]' : ''}`}>
+              <div class={`flex items-center gap-3 rounded-lg px-3 py-2.5 ${i === 0 ? 'bg-edwin-taupe/[0.12]' : ''}`}>
                 <Icon name={row.icon} class={`h-4 w-4 shrink-0 ${row.color}`} />
                 <div class="min-w-0">
-                  <p class="truncate text-sm text-tn-text">{row.title}</p>
-                  <p class="truncate text-xs text-tn-muted">{row.desc}</p>
+                  <p class="truncate text-sm text-edwin-cream">{row.title}</p>
+                  <p class="truncate text-xs text-edwin-taupe/55">{row.desc}</p>
                 </div>
               </div>
             ))}
@@ -199,14 +198,14 @@ const stack = ['Go', 'GTK3 (gotk4)', 'gtk-layer-shell', 'YAML config'];
   </section>
 
   <!-- ─── TRUST BAR ──────────────────────────────────────────────── -->
-  <section class="border-y border-white/[0.06] bg-tn-night/30 px-6 py-6">
+  <section class="border-y border-edwin-taupe/15 bg-edwin-taupe/[0.025] px-6 py-8">
     <div class="mx-auto max-w-6xl">
-      <p class="mb-5 text-center text-xs uppercase tracking-[0.2em] text-tn-muted">
+      <p class="mb-5 text-center text-xs uppercase tracking-[0.2em] text-edwin-taupe/55">
         Built with
       </p>
       <div class="flex flex-wrap justify-center gap-3">
         {stack.map((pill) => (
-          <span class="rounded-full border border-white/[0.08] bg-white/[0.02] px-4 py-1.5 text-xs text-tn-subtext">
+          <span class="rounded-full border border-edwin-taupe/[0.12] bg-edwin-taupe/[0.08] px-4 py-1.5 text-xs text-edwin-taupe/80">
             {pill}
           </span>
         ))}
@@ -228,8 +227,8 @@ const stack = ['Go', 'GTK3 (gotk4)', 'gtk-layer-shell', 'YAML config'];
             <div class="mb-4">
               <Icon name={feature.icon} class={`h-5 w-5 ${feature.color}`} />
             </div>
-            <h3 class="mb-2 font-bold text-tn-text">{feature.title}</h3>
-            <p class="text-sm leading-relaxed text-tn-comment">{feature.desc}</p>
+            <h3 class="mb-2 font-bold text-edwin-cream">{feature.title}</h3>
+            <p class="text-sm leading-relaxed text-edwin-taupe/65">{feature.desc}</p>
           </div>
         ))}
       </div>
@@ -238,7 +237,7 @@ const stack = ['Go', 'GTK3 (gotk4)', 'gtk-layer-shell', 'YAML config'];
 
   <!-- ─── PREFIXES ──────────────────────────────────────────────── -->
   <section id="prefixes" class="relative overflow-hidden px-6 py-24">
-    <div class="absolute inset-0 bg-tn-night/40 pointer-events-none"></div>
+    <div class="pointer-events-none absolute inset-0 bg-edwin-taupe/[0.035]"></div>
     <div class="relative mx-auto max-w-6xl">
       <div class="mb-16 text-center reveal">
         <h2 class="section-title">Prefix cheatsheet</h2>
@@ -247,13 +246,13 @@ const stack = ['Go', 'GTK3 (gotk4)', 'gtk-layer-shell', 'YAML config'];
 
       <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {prefixGroups.map((group, gi) => (
-          <div class={`rounded-xl border border-white/[0.07] bg-tn-storm/30 p-6 reveal reveal-delay-${(gi % 3) + 1}`}>
-            <p class="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-edwin-accent">{group.title}</p>
+          <div class={`rounded-xl border border-edwin-taupe/[0.08] bg-edwin-taupe/[0.04] p-6 reveal reveal-delay-${(gi % 3) + 1}`}>
+            <p class="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-edwin-gold">{group.title}</p>
             <div class="space-y-3">
               {group.rows.map(([prefix, desc]) => (
                 <div class="flex items-start gap-3 text-sm">
-                  <code class="kbd-key shrink-0 font-mono text-edwin-accent">{prefix}</code>
-                  <p class="text-tn-subtext leading-relaxed pt-0.5">{desc}</p>
+                  <code class="kbd-key shrink-0 font-mono text-edwin-gold">{prefix}</code>
+                  <p class="text-edwin-taupe/80 leading-relaxed pt-0.5">{desc}</p>
                 </div>
               ))}
             </div>
@@ -267,43 +266,43 @@ const stack = ['Go', 'GTK3 (gotk4)', 'gtk-layer-shell', 'YAML config'];
   <section id="config" class="px-6 py-24">
     <div class="mx-auto max-w-4xl">
       <div class="mb-12 text-center reveal">
-        <p class="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-edwin-accent">Config</p>
+        <p class="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-edwin-gold">Config</p>
         <h2 class="section-title">One YAML file. Yours to shape.</h2>
         <p class="section-subtitle">Width, colors, hotkey, web shortcuts — everything lives in ~/.config/edwin/config.yaml.</p>
       </div>
 
       <div class="terminal-window reveal reveal-delay-1">
         <div class="terminal-chrome">
-          <span class="h-2.5 w-2.5 rounded-full bg-tn-red/60"></span>
-          <span class="h-2.5 w-2.5 rounded-full bg-tn-yellow/60"></span>
-          <span class="h-2.5 w-2.5 rounded-full bg-tn-green/60"></span>
-          <span class="ml-3 text-xs font-bold text-edwin-accent">~/.config/edwin/config.yaml</span>
+          <span class="h-2.5 w-2.5 rounded-full bg-edwin-taupe/60"></span>
+          <span class="h-2.5 w-2.5 rounded-full bg-edwin-gold/60"></span>
+          <span class="h-2.5 w-2.5 rounded-full bg-edwin-gold/60"></span>
+          <span class="ml-3 text-xs font-bold text-edwin-gold">~/.config/edwin/config.yaml</span>
         </div>
-        <pre class="overflow-x-auto p-4 text-sm font-mono"><code><span class="text-tn-blue">width</span>: <span class="text-tn-green">600</span>
-<span class="text-tn-blue">max_results</span>: <span class="text-tn-green">6</span>
-<span class="text-tn-blue">background_color</span>: <span class="text-tn-yellow">"30, 30, 40"</span>
-<span class="text-tn-blue">background_alpha</span>: <span class="text-tn-green">0.95</span>
-<span class="text-tn-blue">border_radius</span>: <span class="text-tn-green">12</span>
-<span class="text-tn-blue">font_size</span>: <span class="text-tn-green">18</span>
-<span class="text-tn-blue">text_color</span>: <span class="text-tn-yellow">white</span>
-<span class="text-tn-blue">selection_color</span>: <span class="text-tn-yellow">"100, 150, 255"</span>
-<span class="text-tn-blue">show_icons</span>: <span class="text-tn-green">true</span>
-<span class="text-tn-blue">icon_size</span>: <span class="text-tn-green">24</span>
-<span class="text-tn-blue">margin_top</span>: <span class="text-tn-green">100</span>
-<span class="text-tn-blue">history_boost</span>: <span class="text-tn-green">3</span>
-<span class="text-tn-blue">hotkey</span>: <span class="text-tn-yellow">"SUPER,s"</span>
-<span class="text-tn-blue">web_shortcuts</span>:
-  <span class="text-tn-blue">g</span>:
-    <span class="text-tn-blue">name</span>: <span class="text-tn-yellow">Google</span>
-    <span class="text-tn-blue">url</span>: <span class="text-tn-yellow">"https://www.google.com/search?q=%s"</span>
-    <span class="text-tn-blue">icon</span>: <span class="text-tn-yellow">web-browser</span></code></pre>
+        <pre class="overflow-x-auto p-4 text-sm font-mono"><code><span class="text-edwin-gold">width</span>: <span class="text-edwin-gold">600</span>
+<span class="text-edwin-gold">max_results</span>: <span class="text-edwin-gold">6</span>
+<span class="text-edwin-gold">background_color</span>: <span class="text-edwin-gold">"30, 30, 40"</span>
+<span class="text-edwin-gold">background_alpha</span>: <span class="text-edwin-gold">0.95</span>
+<span class="text-edwin-gold">border_radius</span>: <span class="text-edwin-gold">12</span>
+<span class="text-edwin-gold">font_size</span>: <span class="text-edwin-gold">18</span>
+<span class="text-edwin-gold">text_color</span>: <span class="text-edwin-gold">white</span>
+<span class="text-edwin-gold">selection_color</span>: <span class="text-edwin-gold">"100, 150, 255"</span>
+<span class="text-edwin-gold">show_icons</span>: <span class="text-edwin-gold">true</span>
+<span class="text-edwin-gold">icon_size</span>: <span class="text-edwin-gold">24</span>
+<span class="text-edwin-gold">margin_top</span>: <span class="text-edwin-gold">100</span>
+<span class="text-edwin-gold">history_boost</span>: <span class="text-edwin-gold">3</span>
+<span class="text-edwin-gold">hotkey</span>: <span class="text-edwin-gold">"SUPER,s"</span>
+<span class="text-edwin-gold">web_shortcuts</span>:
+  <span class="text-edwin-gold">g</span>:
+    <span class="text-edwin-gold">name</span>: <span class="text-edwin-gold">Google</span>
+    <span class="text-edwin-gold">url</span>: <span class="text-edwin-gold">"https://www.google.com/search?q=%s"</span>
+    <span class="text-edwin-gold">icon</span>: <span class="text-edwin-gold">web-browser</span></code></pre>
       </div>
     </div>
   </section>
 
   <!-- ─── INSTALL ───────────────────────────────────────────────── -->
   <section id="install" class="relative overflow-hidden px-6 py-24">
-    <div class="absolute inset-0 bg-tn-night/30 pointer-events-none"></div>
+    <div class="pointer-events-none absolute inset-0 bg-edwin-taupe/[0.025]"></div>
     <div class="relative mx-auto max-w-4xl">
       <div class="text-center reveal">
         <h2 class="section-title">Build it yourself.<br class="hidden sm:block" />No installer, no telemetry.</h2>
@@ -313,67 +312,67 @@ const stack = ['Go', 'GTK3 (gotk4)', 'gtk-layer-shell', 'YAML config'];
       <div class="mt-10 space-y-4 text-left">
         <div class="terminal-window reveal reveal-delay-1">
           <div class="terminal-chrome">
-            <span class="h-2.5 w-2.5 rounded-full bg-tn-red/60"></span>
-            <span class="h-2.5 w-2.5 rounded-full bg-tn-yellow/60"></span>
-            <span class="h-2.5 w-2.5 rounded-full bg-tn-green/60"></span>
-            <span class="ml-3 text-xs font-bold text-edwin-accent">Step 1 — Clone & install dependencies</span>
+            <span class="h-2.5 w-2.5 rounded-full bg-edwin-taupe/60"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-edwin-gold/60"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-edwin-gold/60"></span>
+            <span class="ml-3 text-xs font-bold text-edwin-gold">Step 1 — Clone & install dependencies</span>
           </div>
-          <pre class="overflow-x-auto p-4 text-sm font-mono"><code><span class="text-tn-comment"># Arch Linux example</span>
-<span class="text-tn-green">git clone https://github.com/tapiaw38/edwin-landing.git && cd edwin-landing</span>
-<span class="text-tn-green">sudo pacman -S gtk3 gtk-layer-shell playerctl yt-dlp aspell hunspell</span>
-<span class="text-tn-green">go mod tidy</span></code></pre>
+          <pre class="overflow-x-auto p-4 text-sm font-mono"><code><span class="text-edwin-taupe/65"># Arch Linux example</span>
+<span class="text-edwin-gold">git clone https://github.com/tapiaw38/edwin-landing.git && cd edwin-landing</span>
+<span class="text-edwin-gold">sudo pacman -S gtk3 gtk-layer-shell playerctl yt-dlp aspell hunspell</span>
+<span class="text-edwin-gold">go mod tidy</span></code></pre>
         </div>
 
         <div class="terminal-window reveal reveal-delay-2">
           <div class="terminal-chrome">
-            <span class="h-2.5 w-2.5 rounded-full bg-tn-red/60"></span>
-            <span class="h-2.5 w-2.5 rounded-full bg-tn-yellow/60"></span>
-            <span class="h-2.5 w-2.5 rounded-full bg-tn-green/60"></span>
-            <span class="ml-3 text-xs font-bold text-edwin-accent">Step 2 — Build</span>
+            <span class="h-2.5 w-2.5 rounded-full bg-edwin-taupe/60"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-edwin-gold/60"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-edwin-gold/60"></span>
+            <span class="ml-3 text-xs font-bold text-edwin-gold">Step 2 — Build</span>
           </div>
-          <pre class="overflow-x-auto p-4 text-sm font-mono"><code><span class="text-tn-green">go build -buildvcs=false -o edwin ./cmd/edwin/</span></code></pre>
+          <pre class="overflow-x-auto p-4 text-sm font-mono"><code><span class="text-edwin-gold">go build -buildvcs=false -o edwin ./cmd/edwin/</span></code></pre>
         </div>
 
         <div class="terminal-window reveal reveal-delay-3">
           <div class="terminal-chrome">
-            <span class="h-2.5 w-2.5 rounded-full bg-tn-red/60"></span>
-            <span class="h-2.5 w-2.5 rounded-full bg-tn-yellow/60"></span>
-            <span class="h-2.5 w-2.5 rounded-full bg-tn-green/60"></span>
-            <span class="ml-3 text-xs font-bold text-edwin-accent">Step 3 — Bind a key & run</span>
+            <span class="h-2.5 w-2.5 rounded-full bg-edwin-taupe/60"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-edwin-gold/60"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-edwin-gold/60"></span>
+            <span class="ml-3 text-xs font-bold text-edwin-gold">Step 3 — Bind a key & run</span>
           </div>
-          <pre class="overflow-x-auto p-4 text-sm font-mono"><code><span class="text-tn-comment"># Edwin doesn't grab a global hotkey itself — your compositor spawns it.</span>
-<span class="text-tn-comment"># Bind a key to run the binary, e.g. in Sway/Hyprland/niri/river config:</span>
-<span class="text-tn-comment">#   bindsym SUPER+s exec /path/to/edwin</span>
+          <pre class="overflow-x-auto p-4 text-sm font-mono"><code><span class="text-edwin-taupe/65"># Edwin doesn't grab a global hotkey itself — your compositor spawns it.</span>
+<span class="text-edwin-taupe/65"># Bind a key to run the binary, e.g. in Sway/Hyprland/niri/river config:</span>
+<span class="text-edwin-taupe/65">#   bindsym SUPER+s exec /path/to/edwin</span>
 
-<span class="text-tn-comment"># MangoWM users get an auto-writer that reads hotkey from config.yaml:</span>
-<span class="text-tn-green">./edwin --setup</span>
+<span class="text-edwin-taupe/65"># MangoWM users get an auto-writer that reads hotkey from config.yaml:</span>
+<span class="text-edwin-gold">./edwin --setup</span>
 
-<span class="text-tn-green">./edwin</span></code></pre>
+<span class="text-edwin-gold">./edwin</span></code></pre>
         </div>
       </div>
 
       <div class="mt-8 grid gap-4 md:grid-cols-3 reveal reveal-delay-4">
         <div class="card p-5">
-          <p class="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-tn-comment">
+          <p class="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-edwin-taupe/65">
             <Icon name="lucide:file-code-2" class="h-3.5 w-3.5" />Source only
           </p>
-          <p class="text-sm leading-relaxed text-tn-subtext">
+          <p class="text-sm leading-relaxed text-edwin-taupe/80">
             No installer script, no package registry. You build the binary yourself with `go build`.
           </p>
         </div>
         <div class="card p-5">
-          <p class="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-tn-comment">
+          <p class="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-edwin-taupe/65">
             <Icon name="lucide:wifi-off" class="h-3.5 w-3.5" />No telemetry
           </p>
-          <p class="text-sm leading-relaxed text-tn-subtext">
+          <p class="text-sm leading-relaxed text-edwin-taupe/80">
             Everything runs locally. No accounts, no analytics, no network calls except the shortcuts you invoke yourself.
           </p>
         </div>
         <div class="card p-5">
-          <p class="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-tn-comment">
+          <p class="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-edwin-taupe/65">
             <Icon name="lucide:settings-2" class="h-3.5 w-3.5" />Yours to edit
           </p>
-          <p class="text-sm leading-relaxed text-tn-subtext">
+          <p class="text-sm leading-relaxed text-edwin-taupe/80">
             Small, readable Go codebase. Add a module by implementing one function and registering it in main.go.
           </p>
         </div>
@@ -382,14 +381,14 @@ const stack = ['Go', 'GTK3 (gotk4)', 'gtk-layer-shell', 'YAML config'];
   </section>
 
   <!-- ─── FINAL CTA ─────────────────────────────────────────────── -->
-  <section class="relative overflow-hidden px-6 py-24 border-t border-white/[0.06]">
-    <div class="absolute inset-0 bg-gradient-to-br from-edwin-accent/[0.06] via-transparent to-tn-cyan/[0.04] pointer-events-none"></div>
+  <section class="relative overflow-hidden px-6 py-24 border-t border-edwin-taupe/[0.12]">
+    <div class="absolute inset-0 bg-gradient-to-br from-edwin-gold/[0.06] via-transparent to-edwin-gold/[0.04] pointer-events-none"></div>
     <div class="relative mx-auto max-w-2xl text-center reveal">
-      <p class="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-edwin-accent">Get started</p>
-      <h2 class="mb-4 text-3xl font-bold tracking-tight text-tn-text sm:text-4xl">
+      <p class="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-edwin-gold">Get started</p>
+      <h2 class="mb-4 text-3xl font-bold tracking-tight text-edwin-cream sm:text-4xl">
         Stop reaching for the mouse.
       </h2>
-      <p class="mb-8 leading-relaxed text-tn-subtext">
+      <p class="mb-8 leading-relaxed text-edwin-taupe/80">
         Clone it, build it with Go, bind a hotkey. Five minutes to a faster desktop.
       </p>
       <div class="flex flex-wrap justify-center gap-4">
